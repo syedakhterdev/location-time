@@ -1,0 +1,23 @@
+<p>Input Lat & Long to get time of given location</p>
+
+<form #myForm="ngForm" (ngSubmit)="getTime(myForm.value)">
+      <div class="form-group">
+        <label for="name">Latitude: </label>
+        <input type="text" class="form-control" id="lat" name="lat" required ngModel>
+      </div>
+		<br>
+      <div class="form-group">
+        <label for="alterEgo">Longitude: </label>
+        <input type="text" class="form-control" id="long" name="lang" ngModel>
+      </div>
+<br>
+      <button type="submit" class="btn btn-success">Submit</button>
+	  <br>
+	  
+	  <div *ngIf="country && dateTime">
+	   <p>Coutry: {{country}}</p>
+	   <p>Current time: {{dateTime}}</p>
+	  </div>
+	  
+
+    </form>
